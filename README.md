@@ -66,3 +66,11 @@ More information about [collections](https://www.11ty.dev/docs/collections/)
 
 Archives page has [pagination](https://www.11ty.dev/docs/pagination/) which won't be covered in this readme.
 
+## .eleventy.js configuration file
+```
+module.exports = function(eleventyConfig) {
+    eleventyConfig.addPassthroughCopy("style")
+    eleventyConfig.addWatchTarget("style")
+};
+```
+Any file in folder named "style" will be watched and updated
